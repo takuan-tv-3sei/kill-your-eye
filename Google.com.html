@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoogIe.com</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: white;
+      transition: background-color 0.01s;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    let colorIndex = 0;
+
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = rainbowColors[colorIndex];
+      colorIndex = (colorIndex + 1) % rainbowColors.length;
+    }
+
+    setInterval(changeBackgroundColor, 10);
+  </script>
+</body>
+</html>
